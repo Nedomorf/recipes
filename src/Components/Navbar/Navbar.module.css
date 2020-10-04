@@ -1,0 +1,131 @@
+#nav {
+    position: fixed;
+    left: -150px;
+    width: 200px;
+    height: 30vh;
+    top: 35vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    z-index: 998;
+    /*background: #ea6534;*/
+    box-shadow: 1px 0px 1px 2px rgba(184, 81, 42, 1);
+    transition: .3s;
+}
+
+#nav:hover,
+#nav.active {
+    left: 0;
+}
+
+#nav .navItem {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+    transition: padding-left .2s ease;
+}
+
+#nav .navItem span,
+#nav .navItem span i {
+    color: yellow;
+    background: none;
+}
+
+#nav .navItem:hover {
+    /*background: #b8512a;*/
+    padding-left: 20px;
+    box-shadow: 1px 0px 1px 2px rgb(255, 193, 0);
+}
+
+#nav .navItem div {
+    width: 200px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 40px;
+    padding-left: 15px;
+}
+
+#navToggle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    color: yellow;
+    box-shadow: 0 0 2px 2px rgba(184, 81, 42, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .15s ease;
+}
+
+#navToggle:hover,
+#navToggle .active {
+    cursor: pointer;
+    background: #b8512a;
+}
+
+#navToggle:before {
+    content: '≡';
+    transform: scale(2.5);
+}
+
+#navToggle.active:before {
+    content: '⨉';
+    transform: scale(1.5);
+}
+
+@media (max-width: 900px) {
+    #nav {
+        position: fixed;
+        left: -250px;
+        width: 0;
+        height: 0;
+        transition: .2s;
+    }
+
+    #nav.active {
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #ea6534;
+        z-index: 998;
+        padding-top: 150px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    #nav.active .navItem {
+        text-decoration: none;
+        color: yellow;
+        font-size: 35px;
+        /*display: flex;*/
+        /*justify-content: left;*/
+        /*align-items: center;*/
+        /*margin: 30px 140px 30px 50px;*/
+        width: 30vw;
+        margin: 30px;
+    }
+
+    #nav.active .navItem div {
+        display: grid;
+        grid-template-columns: auto 35px;
+        padding: 10px;
+    }
+
+    #nav.active .navItem:hover {
+        background: #ea6534;
+    }
+
+    #navToggle.active {
+        background: #b8512a;
+    }
+}

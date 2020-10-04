@@ -1,0 +1,13 @@
+.recipe {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipeBody {
+    background: red;
+    width: 500px;
+    height: 600px;
+}
