@@ -1,13 +1,40 @@
 .recipe {
-    width: 100vw;
-    height: 100vh;
     display: grid;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .recipeBody {
-    background: red;
+    text-align: center;
+    border-radius: 15px;
     width: 500px;
-    height: 600px;
+    height: 500px;
+    background: wheat;
 }
+
+img {
+    background-color:wheat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

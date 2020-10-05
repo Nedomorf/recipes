@@ -31,21 +31,21 @@ color: ${props => {
         default:
             return '#282c34';
     }
-}}
+}};
+}
 `
 
 function App() {
 
-    const [themeMode, setThemeMode] = useState('dark');
+    const [themeMode, setThemeMode] = useState('fire');
 
     const toggleTheme = () => {
-        let mode = '';
-        if (themeMode === 'dark') {
-            mode = 'fire'
-        } else if (themeMode === 'fire') {
-            mode = 'dark'
+        switch (themeMode) {
+            case 'fire':
+                return setThemeMode('dark');
+            default:
+                return setThemeMode('fire');
         }
-        return setThemeMode(mode);
     }
 
     return (
@@ -55,7 +55,7 @@ function App() {
             <Navbar/>
             <Redirect from={'/recipes'} to={'/'}/>
             <Switch>
-                <Route path='/' render={() => <Search/>}/>
+                <Route exact path='/' render={() => <Search/>}/>
                 <Route path='/search' render={() => <Search/>}/>
                 <Route path='/recipe' render={(props) => <Recipe {...props}/>}/>
             </Switch>
