@@ -2,7 +2,7 @@
     position: fixed;
     top: 15px;
     right: 25px;
-    z-index: 999;
+    z-index: 998;
     transform: scale(2);
     transition: color .15s ease;
     padding: 0 3px;
@@ -23,25 +23,40 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 998;
+    z-index: 997;
     height: 100vh;
     width: 40vw;
     clip-path: polygon(100% 0, 100% 100%, 100% 100%);
     background: white;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    height: 75vh;
+    width: 80%;
+    display: flex;
     justify-content: right;
 }
 
-.optionsArea div {
-    background: none;
-    color: #ea6534;
-    width: 60%;
-    height: 80%;
-    text-align: center;
-    font-size: 32px;
-}
 
 .activateOptions {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+
+@media (max-width: 900px) {
+    .activateOptions {
+        width: 100vw;
+        height: 100vh;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .buttons {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

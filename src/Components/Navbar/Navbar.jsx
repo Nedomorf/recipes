@@ -13,9 +13,14 @@ const Navbar = (props) => {
     }
 
     return (
-        <div style={{background:`none`}}>
-            <div id={style.navToggle} onClick={toggleNav} className={activeMenu ? style.active : null}/>
-            <div id={style.nav} className={activeMenu ? style.active : null}>
+        <div>
+            <div
+                id={style.navToggle}
+                onClick={toggleNav}
+                className={activeMenu ? style.active : null}
+                style={{ background: props.color }}
+            />
+            <div id={style.nav} className={activeMenu ? style.active : null} style={{ background: props.color }}>
                 <NavLink to="search" className={style.navItem}>
                     <div>
                         <span className={style.menuItem}>Search</span>

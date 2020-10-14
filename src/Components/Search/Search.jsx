@@ -17,6 +17,7 @@ const Search = () => {
 
     return (
         <div className={style.Search}>
+            <div className={style.bg}/>
             <video loop autoPlay muted className={style.clip}>
                 <source src={bgVideo} type="video/mp4"/>
                 Your browser does not support the video tag.

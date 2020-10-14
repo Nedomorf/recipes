@@ -1,6 +1,6 @@
 import style from "./Options.module.css";
 import React, {useState} from "react";
-import {ThemeProvider} from "styled-components";
+import ColorPicker from "../Common/ColorPicker/ColorPicker";
 
 const Options = (props) => {
 
@@ -18,10 +18,8 @@ const Options = (props) => {
                 <i className="fa fa-cog" aria-hidden="true"/>
             </div>
             <div className={`${activeOptions ? style.activateOptions : null} ${style.optionsArea}`}>
-                <div>
-                    <button onClick={props.toggleTheme}>
-                        2135345
-                    </button>
+                <div className={style.buttons}>
+                    <ColorPicker color={props.color} setColor={props.setColor}/>
                 </div>
             </div>
         </div>
