@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "title": "123",
+      "id": 1
+    },
+    {
+      "title": "456",
+      "id": 2
+    },
+    {
+      "title": "789",
+      "id": 3
+    }
+  ],
+  "theme": [
+    {
+      "textColor": "#fff",
+      "bgColor": "#ea6534",
+      "id": 1
+    }
+  ]
+}

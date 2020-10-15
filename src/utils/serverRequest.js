@@ -1,4 +1,6 @@
-const getRecipe = (search) => {
+import * as axios from "axios";
+
+export const getRecipe = (search) => {
     let str = search;
     // let str = 'https://vk.com/public155530308?w=wall-155530308_39638';
     let xmlhttp = new XMLHttpRequest();
@@ -83,4 +85,24 @@ const getRecipe = (search) => {
     }
 }
 
-export default getRecipe;
+export const getJsonDB = {
+    getTheme(url) {
+        const baseURL = 'http://localhost:3001/' + url;
+        return axios.get(baseURL)
+            .then(res => {
+                let data = res.data[0].bgColor;
+                return data;
+            })
+    },
+    saveTheme(url, color) {
+        const baseURL = 'http://localhost:3001/' + url;
+        return axios.post(baseURL, {
+            "bgColor": `${color}`,
+            "textColor": `${color}`
+        }).then(resp => {
+            console.log(resp.data);
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+}

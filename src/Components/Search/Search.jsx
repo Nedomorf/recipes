@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import style from './Search.module.css';
 import bgVideo from '../../assets/bg.mp4';
-import getRecipe from "../../utils/serverRequest";
+import {getRecipe} from "../../utils/serverRequest";
 
 const Search = () => {
 
@@ -36,7 +36,9 @@ const Search = () => {
                     <label htmlFor="search">Paste your url here</label>
                 </div>
                 <NavLink to='/recipe' onClick={() => getRecipe(search)} className={style.btn}>
-                    проверить
+                    <button>
+                        проверить
+                    </button>
                 </NavLink>
             </div>
         </div>

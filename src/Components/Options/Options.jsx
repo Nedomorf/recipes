@@ -19,7 +19,7 @@ const Options = (props) => {
             </div>
             <div className={`${activeOptions ? style.activateOptions : null} ${style.optionsArea}`}>
                 <div className={style.buttons}>
-                    <ColorPicker color={props.color} setColor={props.setColor}/>
+                    <ColorPicker color={props.color} setColor={props.setColor} saveColor={props.saveColor}/>
                 </div>
             </div>
         </div>

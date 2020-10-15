@@ -8,11 +8,14 @@ const ColorPicker = (props) => {
     return (
         <div>
             <HexColorPicker color={props.color} onChange={props.setColor} className="custom-layout"/>
-            <HexColorInput
-                color={props.color}
-                onChange={props.setColor}
-                className="inp"
-            />
+            <div className="choseColor">
+                <HexColorInput
+                    color={props.color}
+                    onChange={props.setColor}
+                    className="inp flex-item"
+                />
+                <button className="flex-item" onClick={() => props.saveColor()}>Save</button>
+            </div>
         </div>
     );
 };
